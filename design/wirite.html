@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>The Digital Sanctuary - New Entry</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "sage": "#8FA998",
+                        "sage-light": "#A7BCAD",
+                        "neutral-soft": "#F7F8F6",
+                        "on-surface": "#2D332F",
+                        "on-surface-variant": "#6A736D",
+                        "outline": "#D1D9D3",
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Newsreader", "serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 20;
+        }
+
+        body {
+            background-color: #F7F8F6;
+            color: #2D332F;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .distraction-free-focus:focus-within {
+            opacity: 1 !important;
+        }
+
+        .writing-area:empty:before {
+            content: attr(data-placeholder);
+            color: rgba(106, 115, 109, 0.3);
+            font-style: italic;
+        }
+
+        .writing-area:focus {
+            outline: none;
+        }
+
+        /* Custom scrollbar for horizontal images */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="font-label pb-32">
+    <!-- Header -->
+    <header
+        class="sticky top-0 z-50 w-full bg-neutral-soft/80 backdrop-blur-sm px-6 h-20 flex items-center justify-between">
+        <button class="text-on-surface-variant hover:text-sage transition-colors">
+            <span class="material-symbols-outlined text-2xl">arrow_back</span>
+        </button>
+        <div class="flex flex-col items-center">
+            <span class="font-label text-[10px] font-bold tracking-[0.2em] text-on-surface-variant uppercase">新日记</span>
+            <span class="font-label text-xs text-on-surface-variant/60">2023年10月24日</span>
+        </div>
+        <button class="text-sage font-headline font-bold text-sm tracking-wide">保存</button>
+    </header>
+    <main class="max-w-xl mx-auto px-6 pt-4 space-y-8">
+        <!-- Entry Header -->
+        <!-- Rich Text Toolbar -->
+        <section class="flex items-center justify-between py-2 border-y border-outline/20">
+            <button
+                class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-sage/10 text-sage hover:bg-sage/20 transition-all">
+                <span class="material-symbols-outlined text-[18px]">sentiment_satisfied</span>
+                <span class="text-[11px] font-bold tracking-wider uppercase">平静</span>
+            </button>
+        </section>
+        <!-- Writing Area (Rich Text) -->
+        <article class="relative">
+            <div class="writing-area w-full min-h-[300px] bg-transparent border-none p-0 font-body text-[1.35rem] leading-[1.8] text-on-surface"
+                contenteditable="true" data-placeholder="今天感觉如何？让思绪自然流淌..."></div>
+        </article>
+        <!-- Image Gallery Upload Section -->
+        <section class="space-y-3">
+            <h3 class="font-label text-[10px] font-bold tracking-[0.15em] text-on-surface-variant/40 uppercase">视觉回忆
+            </h3>
+            <div class="flex gap-3 overflow-x-auto hide-scrollbar pb-2">
+                <!-- Square Upload Button -->
+                <button
+                    class="flex-shrink-0 w-24 h-24 rounded-xl border-2 border-dashed border-outline/50 hover:border-sage/40 hover:bg-sage/5 transition-all flex flex-col items-center justify-center text-on-surface-variant/40 hover:text-sage group">
+                    <span
+                        class="material-symbols-outlined text-2xl group-hover:scale-110 transition-transform">add</span>
+                </button>
+                <!-- Thumbnails -->
+                <div class="flex-shrink-0 w-24 h-24 rounded-xl overflow-hidden relative group">
+                    <img alt="Memory" class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH5LaZwyYmatFy0C8cIvzjhD6zRKkFJ2KQ44iGNbbULGzdxOkig1XjpeP7SXJO9TalsvfZU3EUa7osrUwCqGq-RmF90f7ZOlnt4nA39wDDy4qMC-JAHZK3sfMs-Q4I_Ipv60T0onNNy5E6rsOzuy3MQcFgfBx-xCZY946gJ9l9_eTX0PVxVLg0r0ZmskT9emEqEScF5KxNhpLF2Ir1nFQsKOxhXGBDsjeB6aMBNjFJa8NrVUwQlLz9W6viZ9S6UfxtdCq_ivHDLA4o" />
+                    <button
+                        class="absolute top-1 right-1 bg-black/20 backdrop-blur-sm text-white rounded-full p-0.5 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="material-symbols-outlined text-xs">close</span>
+                    </button>
+                </div>
+                <div class="flex-shrink-0 w-24 h-24 rounded-xl overflow-hidden relative group">
+                    <img alt="Memory" class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCBLGjrZ8aHlWj0NR9G4ydt0pOzxqVK5QJsrF4QfqSc_vIM4x0P1FeW9baJbyFsDqdOguqBwua3nv-HsDM13l_x9IFyZBW6N3ZInv3Mzz8CXHnjolIPoPwLE1BP2stHmOub3nr8wLEdymHQDBlnDbM8c1UzmFEkF0tYBN8_JO1dWYb4i6QTRY2KTIO94vmbNLCliaUUBayW9LnC6RSiuE2_Ig9h51idTX03vCmXAJi-5OdQuBYETAiLUDYP7MZWOs2VyKCoSWtZpLn" />
+                    <button
+                        class="absolute top-1 right-1 bg-black/20 backdrop-blur-sm text-white rounded-full p-0.5 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="material-symbols-outlined text-xs">close</span>
+                    </button>
+                </div>
+                <div class="flex-shrink-0 w-24 h-24 rounded-xl overflow-hidden relative group">
+                    <img alt="Memory" class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB09uZwNljS-dmHaISw4bDIfE6Fr8BZ5Pd9rguwcRXp4bWd4jJZOulTUwKgVzsYAKVdZUoTbVYwMwQHTkcuKSAmiAGUiRyTWWcNRXgCHhH_OeiWi3uoYJvmtPrfz8xpOTZb1fplxEC3TqZ4X--2Cy532Kq5EbgC5_1qtQ3DOrgdAlrCW7hDG4JNKiNAHeCxe1Prsqpp7OcxaPo7JrzV0VOtmUmeTvYvMFu4XV-aSBF61A_4cTPgCa3AxjS8l_x3mrzaEJZgH1ZK0Ver" />
+                    <button
+                        class="absolute top-1 right-1 bg-black/20 backdrop-blur-sm text-white rounded-full p-0.5 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="material-symbols-outlined text-xs">close</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Navigation -->
+    <nav
+        class="fixed bottom-0 left-0 w-full px-8 pb-8 pt-4 bg-gradient-to-t from-neutral-soft via-neutral-soft to-transparent">
+        <div
+            class="max-w-md mx-auto flex justify-around items-center h-16 bg-white/90 backdrop-blur-md rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.04)] border border-outline/20">
+            <a class="p-2 text-on-surface-variant/40 hover:text-sage transition-all" href="#">
+                <span class="material-symbols-outlined text-[24px]">home</span>
+            </a>
+            <a class="p-2 text-on-surface-variant/40 hover:text-sage transition-all" href="#">
+                <span class="material-symbols-outlined text-[24px]">search</span>
+            </a>
+            <a class="p-2 text-sage bg-sage/5 rounded-full transition-all" href="#">
+                <span class="material-symbols-outlined text-[24px]"
+                    style="font-variation-settings: 'FILL' 1;">edit_note</span>
+            </a>
+            <a class="p-2 text-on-surface-variant/40 hover:text-sage transition-all" href="#">
+                <span class="material-symbols-outlined text-[24px]">auto_stories</span>
+            </a>
+            <a class="p-2 text-on-surface-variant/40 hover:text-sage transition-all" href="#">
+                <span class="material-symbols-outlined text-[24px]">settings</span>
+            </a>
+        </div>
+    </nav>
+</body>
+
+</html>

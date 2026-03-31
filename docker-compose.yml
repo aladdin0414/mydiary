@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  mydiary:
+    build: .
+    container_name: mydiary_app
+    ports:
+      - "3000:3000" # 左侧为你外网暴露的端口，可以按需更改
+    volumes:
+      - ./uploads:/app/uploads       # 挂载您的上传图片持久化目录
+      - ./backend/.env:/app/backend/.env  # 挂载应用的环境配置以供随时修改
+    restart: unless-stopped
