@@ -1,12 +1,37 @@
 version: '3.8'
 
 services:
+  db:
+    image: postgres:15-alpine
+    container_name: mydiary_db
+    environment:
+      POSTGRES_USER: ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-postgres}
+      POSTGRES_DB: ${DB_NAME:-mydiary}
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-postgres} -d ${DB_NAME:-mydiary}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
   mydiary:
     build: .
     container_name: mydiary_app
     ports:
-      - "3000:3000" # 左侧为你外网暴露的端口，可以按需更改
+      - "3000:3000"
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: ${DB_USER:-postgres}
+      DB_PASSWORD: ${DB_PASSWORD:-postgres}
+      DB_NAME: ${DB_NAME:-mydiary}
+    depends_on:
+      db:
+        condition: service_healthy
     volumes:
-      - ./uploads:/app/uploads       # 挂载您的上传图片持久化目录
-      - ./backend/.env:/app/backend/.env  # 挂载应用的环境配置以供随时修改
+      - ./uploads:/app/uploads
+      - ./backend/.env:/app/backend/.env
     restart: unless-stopped
