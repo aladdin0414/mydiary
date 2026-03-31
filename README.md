@@ -57,6 +57,23 @@
    npm run dev
    ```
 
+#### Docker 部署 (推荐)
+
+如果你希望使用 Docker 快速部署：
+
+1. 确保已安装 Docker 和 Docker Compose。
+2. 配置后端环境变量（请确保在 `.env` 中正确配置外部 PostgreSQL 数据库的连接信息）：
+   ```bash
+   cd backend
+   cp .env.example .env
+   cd ..
+   ```
+3. 运行容器：
+   ```bash
+   docker-compose up -d --build
+   ```
+4. 启动完成后，可以通过 `http://localhost:3000` 访问应用。
+
 ### 项目结构
 
 - `backend/`: Express 后端服务
@@ -119,6 +136,23 @@ A personal diary application built with Vue 3, TypeScript, Tailwind CSS, Node.js
    npm install
    npm run dev
    ```
+
+#### Docker Deployment (Recommended)
+
+If you prefer to deploy using Docker:
+
+1. Ensure Docker and Docker Compose are installed.
+2. Configure backend environment variables (make sure to set up the connection details for your external PostgreSQL database in `.env`):
+   ```bash
+   cd backend
+   cp .env.example .env
+   cd ..
+   ```
+3. Run the container:
+   ```bash
+   docker-compose up -d --build
+   ```
+4. Once started, access the application at `http://localhost:3000`.
 
 ### Project Structure
 
