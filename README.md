@@ -8,6 +8,11 @@
 
 一个基于 Vue 3, TypeScript, Tailwind CSS, Node.js, Express 和 PostgreSQL 构建的个人日记应用。
 
+### 预览
+
+![日记日历](./assets/screenshots/screenshot1.jpg)
+![记录日记](./assets/screenshots/screenshot2.jpg)
+
 ### 快速开始
 
 #### 环境依赖
@@ -65,6 +70,11 @@
 ## English
 
 A personal diary application built with Vue 3, TypeScript, Tailwind CSS, Node.js, Express, and PostgreSQL.
+
+### Preview
+
+![Diary Calendar](./assets/screenshots/screenshot1.jpg)
+![Diary Editor](./assets/screenshots/screenshot2.jpg)
 
 ### Quick Start
 
