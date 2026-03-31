@@ -1,15 +1,21 @@
-# MyDiary - 个人日历日记应用
+# MyDiary - 个人日志应用 / Personal Diary Application
+
+[中文](#中文) | [English](#english)
+
+---
+
+## 中文
 
 一个基于 Vue 3, TypeScript, Tailwind CSS, Node.js, Express 和 PostgreSQL 构建的个人日记应用。
 
-## 快速开始
+### 快速开始
 
-### 环境依赖
+#### 环境依赖
 
 - Node.js (v18+)
 - PostgreSQL
 
-### 后端配置
+#### 后端配置
 
 1. 进入后端目录：
    ```bash
@@ -34,7 +40,7 @@
    npm run dev
    ```
 
-### 前端配置
+#### 前端配置
 
 1. 进入前端目录：
    ```bash
@@ -46,10 +52,68 @@
    npm run dev
    ```
 
-## 项目结构
+### 项目结构
 
 - `backend/`: Express 后端服务
 - `frontend/`: Vue 3 前端应用
 - `design/`: 设计稿和原型文件
 - `doc/`: 项目文档
 - `docker-compose.yml`: Docker 部署配置
+
+---
+
+## English
+
+A personal diary application built with Vue 3, TypeScript, Tailwind CSS, Node.js, Express, and PostgreSQL.
+
+### Quick Start
+
+#### Requirements
+
+- Node.js (v18+)
+- PostgreSQL
+
+#### Backend Configuration
+
+1. Move to the backend directory:
+   ```bash
+   cd backend
+   ```
+2. Create your `.env` file from the template:
+   ```bash
+   cp .env.example .env
+   ```
+3. Modify the database settings and other environment variables in `.env`:
+   - `PORT`: Backend service port
+   - `DB_HOST`: Database host address
+   - `DB_PORT`: Database port
+   - `DB_USER`: Database username
+   - `DB_PASSWORD`: Database password
+   - `DB_NAME`: Database name
+   - `JWT_SECRET`: Secret key for JWT authentication
+
+4. Install dependencies and start the server:
+   ```bash
+   npm install
+   npm run dev
+   ```
+
+#### Frontend Configuration
+
+1. Move to the frontend directory:
+   ```bash
+   cd frontend
+   ```
+2. Install dependencies and start the dev server:
+   ```bash
+   npm install
+   npm run dev
+   ```
+
+### Project Structure
+
+- `backend/`: Express backend service
+- `frontend/`: Vue 3 frontend application
+- `design/`: Design drafts and prototypes
+- `doc/`: Project documentation
+- `docker-compose.yml`: Docker deployment configuration
